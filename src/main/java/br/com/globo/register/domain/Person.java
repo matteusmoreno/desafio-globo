@@ -1,4 +1,4 @@
-package br.com.globo.register;
+package br.com.globo.register.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,13 +16,14 @@ import java.time.LocalDateTime;
 @Getter @Setter
 public class Person {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private String name;
-    private LocalDate birthDate;
-    private String age;
-    private String phone;
+    private String birthDate;
+    private int age;
+    @Id
     private String cpf;
+    private String phone;
+    @Embedded
+    private Adress adress;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
