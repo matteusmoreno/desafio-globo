@@ -22,8 +22,11 @@ public class Person {
     @Id
     private String cpf;
     private String phone;
-    @Embedded
-    private Adress adress;
+    private String cep;
+    private String logradouro;
+    private String bairro;
+    private String localidade;
+    private String uf;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;

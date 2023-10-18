@@ -1,6 +1,5 @@
 package br.com.globo.register.response;
 
-import br.com.globo.register.domain.Adress;
 import br.com.globo.register.domain.Person;
 
 import java.time.LocalDateTime;
@@ -11,7 +10,11 @@ public record PersonDetailsResponse(
         int age,
         String cpf,
         String phone,
-        Adress adress,
+        String cep,
+        String logradouro,
+        String bairro,
+        String localidade,
+        String uf,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
         LocalDateTime deletedAt,
@@ -24,7 +27,11 @@ public record PersonDetailsResponse(
                 person.getAge(),
                 person.getCpf(),
                 person.getPhone(),
-                person.getAdress(),
+                person.getCep(),
+                person.getLogradouro(),
+                person.getBairro(),
+                person.getLocalidade(),
+                person.getUf(),
                 person.getCreatedAt(),
                 person.getUpdatedAt(),
                 person.getDeletedAt(),
